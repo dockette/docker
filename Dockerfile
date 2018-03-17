@@ -10,6 +10,7 @@ ENV USER_HOME /home/dfx
 
 RUN apk update && \
     apk upgrade && \
+    apk add --no-cache bash && \
     adduser -D -u $USER_UID $USER_NAME && \
     rm -rf /var/cache/apk/*
 
