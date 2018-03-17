@@ -12,5 +12,10 @@
 
 [![Join the chat](https://img.shields.io/gitter/room/dockette/dockette.svg?style=flat-square)](https://gitter.im/dockette/dockette?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-## 
+## Info
 
+This image is useful in GitLab CI and any other docker-based environments.
+
+Preinstalled:
+- docker
+- docker-compose
