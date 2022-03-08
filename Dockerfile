@@ -3,7 +3,7 @@ FROM dockette/alpine:edge
 # Base on https://raw.githubusercontent.com/wernight/docker-compose/master/Dockerfile
 
 ENV GLIBC_VERSION=2.28-r0
-ENV DOCKER_COMPOSE_VERSION=1.23.2
+ENV DOCKER_COMPOSE_VERSION=v2.3.2
 
 RUN set -x && \
    echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories && \
@@ -20,7 +20,8 @@ RUN set -x && \
    curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-Linux-x86_64 > /usr/local/bin/docker-compose && \
    chmod a+rx /usr/local/bin/docker-compose && \
    # Basic check it works
-   docker-compose version && \
+   docker -v && \
+   docker-compose -v && \
    # Clean-up
    apk del .deps
 
