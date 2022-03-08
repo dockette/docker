@@ -4,6 +4,7 @@ FROM dockette/alpine:edge
 
 ENV GLIBC_VERSION=2.28-r0
 ENV DOCKER_COMPOSE_VERSION=v2.3.2
+ENV DOCKER_BUILDKIT=1
 
 RUN set -x && \
    echo '@community http://nl.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories && \
