@@ -3,7 +3,7 @@ FROM dockette/alpine:edge
 # Base on https://raw.githubusercontent.com/wernight/docker-compose/master/Dockerfile
 
 ENV GLIBC_VERSION=2.28-r0
-ENV DOCKER_COMPOSE_VERSION=v2.3.2
+ENV DOCKER_COMPOSE_VERSION=v2.16.0
 ENV DOCKER_BUILDKIT=1
 
 RUN set -x && \
