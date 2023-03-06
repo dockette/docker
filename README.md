@@ -19,3 +19,7 @@ This image is useful in GitLab CI and any other docker-based environments.
 Preinstalled:
 - docker
 - docker-compose
+- make
+- git
+- wget
+- curl
