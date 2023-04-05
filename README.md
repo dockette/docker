@@ -23,3 +23,4 @@ Preinstalled:
 - git
 - wget
 - curl
+- direnv
