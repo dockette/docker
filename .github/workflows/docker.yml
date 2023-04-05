@@ -10,11 +10,16 @@ jobs:
     strategy:
       matrix:
         include:
-          - version: "latest"
+          - image: latest
+            version: 20-cli
+          - image: 23-cli
+            version: 23-cli
+          - image: 20-cli
+            version: 20-cli
 
       fail-fast: false
 
-    name: Docker (dockette/docker:${{ matrix.version }})
+    name: Docker (dockette/docker:${{ matrix.image }})
 
     steps:
       - name: Checkout
@@ -36,14 +41,16 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}-${{ matrix.version }}
+          key: ${{ runner.os }}-buildx-${{ github.sha }}-${{ matrix.image }}
 
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
-          tags: dockette/docker:${{ matrix.version }}
+          tags: dockette/docker:${{ matrix.image }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
           platforms: linux/amd64,linux/arm64
+          build-args: |
+            VERSION=${{ matrix.version }}

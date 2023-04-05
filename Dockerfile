@@ -1,4 +1,6 @@
-FROM docker:20.10-cli
+ARG VERSION=20-cli
+
+FROM docker:$VERSION
 
 ENV DOCKER_BUILDKIT=1
 
