@@ -11,11 +11,13 @@ jobs:
       matrix:
         include:
           - image: latest
+            version: 24-cli
+          - image: 20-cli
             version: 20-cli
           - image: 23-cli
             version: 23-cli
-          - image: 20-cli
-            version: 20-cli
+          - image: 24-cli
+            version: 24-cli
 
       fail-fast: false
 
