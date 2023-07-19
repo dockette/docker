@@ -3,8 +3,8 @@ DOCKER_IMAGE=dockette/docker
 docker-build:
 	docker buildx \
 		build \
-		--platform linux/amd64,linux/arm64 \
+		--platform linux/arm64 \
 		--pull \
-		--build-arg VERSION=23-cli \
+		--build-arg VERSION=24-cli \
 		-t ${DOCKER_IMAGE} \
 		.

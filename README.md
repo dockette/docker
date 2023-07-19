@@ -12,7 +12,7 @@
 
 [![Join the chat](https://img.shields.io/gitter/room/dockette/dockette.svg?style=flat-square)](https://gitter.im/dockette/dockette?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-## Info
+## Usage
 
 This image is useful in GitLab CI and any other docker-based environments.
 
@@ -24,3 +24,11 @@ Preinstalled:
 - wget
 - curl
 - direnv
+
+**Images**
+
+- `dockette/docker:latest`
+- `dockette/docker:20-cli`
+- `dockette/docker:23-cli`
+- `dockette/docker:24-cli`
+  
