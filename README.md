@@ -28,7 +28,8 @@ Preinstalled:
 **Images**
 
 - `dockette/docker:latest`
-- `dockette/docker:20-cli`
-- `dockette/docker:23-cli`
+- `dockette/docker:27-cli`
 - `dockette/docker:24-cli`
+- `dockette/docker:23-cli`
+- `dockette/docker:20-cli`
   
