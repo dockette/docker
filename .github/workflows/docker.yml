@@ -16,7 +16,7 @@ jobs:
       matrix:
         include:
           - image: latest
-            version: 24-cli
+            version: 28-cli
           - image: 20-cli
             version: 20-cli
           - image: 23-cli
@@ -25,6 +25,8 @@ jobs:
             version: 24-cli
           - image: 27-cli
             version: 27-cli
+          - image: 28-cli
+            version: 28-cli
 
       fail-fast: false
 

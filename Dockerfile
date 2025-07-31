@@ -1,4 +1,4 @@
-ARG VERSION=24-cli
+ARG VERSION=28-cli
 
 FROM docker:$VERSION
 
