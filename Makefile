@@ -5,6 +5,6 @@ docker-build:
 		build \
 		--platform linux/arm64 \
 		--pull \
-		--build-arg VERSION=28-cli \
+		--build-arg VERSION=29-cli \
 		-t ${DOCKER_IMAGE} \
 		.
