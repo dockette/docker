@@ -33,3 +33,7 @@ Preinstalled:
 - `dockette/docker:24-cli`
 - `dockette/docker:23-cli`
 - `dockette/docker:20-cli`
+
+## Maintenance
+
+See [how to contribute](https://github.com/dockette/.github/blob/master/CONTRIBUTING.md) to this package.
