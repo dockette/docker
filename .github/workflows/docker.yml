@@ -9,6 +9,9 @@ on:
   schedule:
     - cron: "0 8 * * 1"
 
+permissions:
+  contents: read
+
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -57,7 +60,7 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}-${{ matrix.image }}
 
       - name: Build and push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: true
