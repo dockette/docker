@@ -1,10 +1,23 @@
-DOCKER_IMAGE=dockette/docker
+DOCKER_IMAGE ?= dockette/docker
+TAG ?= latest
+VERSION ?= 29-cli
+
+build: docker-build
+
+test:
+	docker run --rm ${DOCKER_IMAGE}:${TAG} docker --version
+	docker run --rm ${DOCKER_IMAGE}:${TAG} docker compose version
+	docker run --rm ${DOCKER_IMAGE}:${TAG} make --version
+
+run:
+	docker run --rm -it ${DOCKER_IMAGE}:${TAG}
 
 docker-build:
 	docker buildx \
 		build \
-		--platform linux/arm64 \
+		--platform linux/amd64 \
 		--pull \
-		--build-arg VERSION=29-cli \
-		-t ${DOCKER_IMAGE} \
+		--build-arg VERSION=${VERSION} \
+		-t ${DOCKER_IMAGE}:${TAG} \
+		--load \
 		.
